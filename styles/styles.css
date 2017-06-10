@@ -4,15 +4,37 @@ tml, body {
 
 }
 
+.flexcontainer{
+  max width: 50%;
+width: 75%;
+  display: -webkit-flex;
+     display: flex;
+     -webkit-align-items: center;
+     align-items: center;
+     -webkit-justify-content: center;
+     justify-content: center;
+     -webkit-flex-flow: column wrap;
+     flex-flow: column wrap;
+     -webkit-align-content: center;
+     align-content: center;
+     display: -webkit-flex;
+ -webkit-flex-direction: row;
+}
+.contain{
+  border-style:solid;
+  width:20em;
+  align-items: center;
+  background-color: blue;
+  margin: 20px;
+  height: 20em;
+  max-height: 20em;
+}
+
 #title{
   justify-content: center;
   margin-left: 40%;
 }
-#pontainer{
-  display:flex;
-  align-items: center;
-  background-color: blue;
-}
-.tontainer> div{
-  flex:1
+
+.tontainer{
+
 }
