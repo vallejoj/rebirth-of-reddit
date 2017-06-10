@@ -1,0 +1,18 @@
+tml, body {
+  height: 100%;
+  margin: 0;
+
+}
+
+#title{
+  justify-content: center;
+  margin-left: 40%;
+}
+#pontainer{
+  display:flex;
+  align-items: center;
+  background-color: blue;
+}
+.tontainer> div{
+  flex:1
+}
