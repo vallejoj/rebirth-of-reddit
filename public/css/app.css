@@ -33,28 +33,37 @@ h1 {
 
 .contain {
   overflow: hidden;
-  width: 20em;
+  width: 22em;
   align-items: center;
   background-color: white;
-  height: 20em;
-  max-height: 20em;
+  height: 40em;
+  max-height: 40em;
   margin: 20px; }
 
-.container {
-  display: inline-flex;
-  position: relative; }
-
 .pic {
-  width: px;
+  width: 75%;
   height: 60%;
   justify-content: center;
+  width: 17e;
   margin: 20px;
-  margin-top: 25px; }
+  margin-left: 40px; }
 
 .title {
-  justify-content: center;
-  margin-left: 20%;
-  font-family: cursive; }
+  margin: 20px;
+  font-size: 24px;
+  text-align: left;
+  position: inherit;
+  font-family: Impact; }
+
+.author {
+  margin: 20px;
+  font-size: 16px;
+  font-family: Impact; }
 
 footer {
-  background-color: #4E4E4E; }
+  background-color: #4E4E4E;
+  height: 70px; }
+
+.icons {
+  align-items: center;
+  position: inherit; }

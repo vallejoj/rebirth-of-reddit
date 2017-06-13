@@ -4,7 +4,7 @@ console.log("yeah buddy ")
 
   var oReq = new XMLHttpRequest();
   oReq.addEventListener('load',loadPics )
-  oReq.open('GET', ' https://www.reddit.com/r/funny_gifs.json')
+  oReq.open('GET', ' https://www.reddit.com/r/ArchitecturePorn/.json')
   oReq.send()
 
 // var pReq= new XMLHttpRequest();
@@ -14,14 +14,14 @@ console.log("yeah buddy ")
 
 
   function loadPics(){
-    for (var i = 0 ; i <4; i++)  {
+    for (var i = 0 ; i <10; i++)  {
       var contain=document.createElement('div')
       contain.className="contain";
       document.getElementsByClassName('flexbox-container')[0].appendChild(contain)
 
       var response=  JSON.parse(this.responseText);
       var pic=document.createElement('IMG')
-       pic.setAttribute("src", response.data.children[i].data.thumbnail);
+       pic.setAttribute("src", response.data.children[i].data.url);
       pic.className="pic";
       contain.appendChild(pic)
 
@@ -35,17 +35,47 @@ console.log("yeah buddy ")
     title.innerHTML=tRes.data.children[i].data.title
     wordContainer.appendChild(title)
 
+
+    function timeSince(timeStamp) {
+      var now = new Date(),
+        secondsPast = (now.getTime() - timeStamp.getTime()) / 1000;
+      if(secondsPast < 60){
+        return parseInt(secondsPast) + 's';
+      }
+      if(secondsPast < 3600){
+        return parseInt(secondsPast/60) + 'm';
+      }
+      if(secondsPast <= 86400){
+        return parseInt(secondsPast/3600) + 'h';
+      }
+      if(secondsPast > 86400){
+          day = timeStamp.getDate();
+          month = timeStamp.toDateString().match(/ [a-zA-Z]*/)[0].replace(" ","");
+          year = timeStamp.getFullYear() == now.getFullYear() ? "" :  " "+timeStamp.getFullYear();
+          return day + " " + month + year;
+      }
+    }
+
+
+
       var aRes=JSON.parse(this.responseText);
       var author=document.createElement('p')
       author.className="author"
-      author.innerHTML="By " +aRes.data.children[i].data.author
-      title.appendChild(author)
+      var auth= aRes.data.children[i].data.author
+      var timeTimes= aRes.data.children[i].data.created_utc
+      console.log(timeTimes);
+
+      author.innerHTML="By: " + auth +
+      " • "+ "7 months ago";
+
+      contain.appendChild(author)
 
       var timeRes= JSON.parse(this.responseText);
       var time=document.createElement('p')
       time.className="time"
-      var timeTimes= new Date(aRes.data.children[i].data.created*1000)
-      time.innerHTML=timeTimes
+
+
+
       author.appendChild(time)
 
       var comRes=JSON.parse(this.responseText);
