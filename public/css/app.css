@@ -8,8 +8,14 @@ h1 {
 .image {
   display: inline-flex;
   justify-content: center;
+  margin-left: 45%;
+  position: relative; }
+
+.line {
+  margin-top: 5%;
   position: relative;
-  margin-left: 45%; }
+  justify-content: center;
+  margin-left: 34%; }
 
 .menu {
   display: inline-flex;
@@ -17,6 +23,13 @@ h1 {
   background-color: #4E4E4E;
   width: 100%;
   color: #B9B9B9; }
+
+#random:hover, #board:hover, #get:hover {
+  color: #A9411A; }
+
+.contain:hover {
+  outline-color: orange;
+  outline-style: solid; }
 
 .flexbox-container {
   display: flex;
@@ -46,7 +59,7 @@ h1 {
   justify-content: center;
   width: 17e;
   margin: 20px;
-  margin-left: 40px; }
+  margin-left: 48px; }
 
 .title {
   margin: 20px;
