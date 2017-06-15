@@ -1,3 +1,7 @@
+a{
+  color: black;
+  text-decoration: none;
+}
 body {
   height: 100%;
   margin: 0;
@@ -6,27 +10,19 @@ body {
 h1{
   padding-left: 10px;
 }
-.container{
 
-}
-.jumbotron{
-
-
-
-}
 .image{
   display: inline-flex;
   justify-content: center;
   margin-left: 45%;
   position: relative;
 
-
 }
-.line{
-margin-top: 5%;
+.image{
+
 position: relative;
   justify-content: center;
-  margin-left: 34%;
+  margin-left: 33%;
 
 }
 .menu{
@@ -35,14 +31,19 @@ position: relative;
   background-color: #4E4E4E;
   width:100%;
   color: #B9B9B9;
+  font-family: 'Oswald', sans-serif;
 }
 #random:hover,#board:hover,#get:hover{
   color:#A9411A;
+
 }
-.contain:hover{
+.contain:hover {
   outline-color: orange;
   outline-style: solid;
+.title{
+   color:#A9411A;
 
+ }
 }
 
 
@@ -62,7 +63,7 @@ position: relative;
 }
 
 .contain{
-  overflow: hidden;
+  overflow: scroll;
 
   width:22em;
   align-items: center;
@@ -88,19 +89,52 @@ position: relative;
   font-size: 24px;
 text-align: left;
 position: inherit;
-  font-family: Impact;
+font-family: 'Lato', sans-serif;
+
 }
 .author{
   margin: 20px;
   font-size: 16px;
-  font-family: Impact;
+font-family: 'Lato', sans-serif;
 
 }
 footer{
     background-color: #4E4E4E;
   height: 70px;
 }
-.icons{
-  align-items: center;
-  position: inherit;
+.icon{
+  margin-left: 45%;
+
+
 }
+#instagram{
+  height:40px;
+  width:40px;
+  margin-top: 10px;
+}
+#facebook{
+  height:40px;
+  width:40px;
+  margin-top: 10px;
+}
+
+ @media screen and (min-width:1608px){
+   .image{
+     display: inline-flex;
+     justify-content: center;
+     margin-left: 45%;
+     position: relative;
+
+   }
+
+   .image{
+display: inline-flex;
+
+     justify-content: center;
+     margin-left: 38%;
+
+   }
+
+
+
+ }
