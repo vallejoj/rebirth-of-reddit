@@ -7,18 +7,23 @@ body {
   margin: 0; }
 
 h1 {
-  padding-left: 10px; }
+  padding-left: 10px;
+  color: #B9B9B9; }
+
+.titlebar {
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+  padding-top: 12px; }
 
 .image {
-  display: inline-flex;
-  justify-content: center;
-  margin-left: 45%;
   position: relative; }
-
-.image {
-  position: relative;
-  justify-content: center;
-  margin-left: 33%; }
 
 .menu {
   display: inline-flex;
@@ -28,7 +33,7 @@ h1 {
   color: #B9B9B9;
   font-family: 'Oswald', sans-serif; }
 
-#random:hover, #board:hover, #get:hover {
+h1:hover, #random:hover, #board:hover, #get:hover {
   color: #A9411A; }
 
 .contain:hover {
@@ -52,20 +57,21 @@ h1 {
 
 .contain {
   overflow: scroll;
+  justify-content: center;
+  text-align: center;
   width: 22em;
   align-items: center;
+  align-content: center;
   background-color: white;
-  height: 40em;
-  max-height: 40em;
+  height: 30em;
+  max-height: 30em;
   margin: 20px; }
 
 .pic {
   width: 75%;
   height: 60%;
   justify-content: center;
-  width: 17e;
-  margin: 20px;
-  margin-left: 48px; }
+  margin: 20px; }
 
 .title {
   margin: 20px;
@@ -101,8 +107,22 @@ footer {
     display: inline-flex;
     justify-content: center;
     margin-left: 45%;
-    position: relative; }
-  .image {
-    display: inline-flex;
+    position: relative; } }
+
+@media screen and (min-width: 1608px) and (min-width: 1300px) {
+  .titlebar {
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: row;
     justify-content: center;
-    margin-left: 38%; } }
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    padding-top: 12px; }
+  .image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 100em; } }
